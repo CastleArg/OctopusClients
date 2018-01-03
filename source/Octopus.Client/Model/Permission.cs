@@ -106,6 +106,8 @@ namespace Octopus.Client.Model
 
         [Description("View users")] UserView,
 
+        [Description("Edit users")] UserEdit,
+
         [Description("Invite users to register accounts")] UserInvite,
 
         [Description("View other user's roles")] UserRoleView,
@@ -159,8 +161,8 @@ namespace Octopus.Client.Model
         [Description("Create accounts")] [SupportsRestriction(PermissionScope.Environments)] AccountCreate,
 
         [Description("Delete accounts")] [SupportsRestriction(PermissionScope.Environments)] AccountDelete,
-	
-    	[Description("View audit logs")] AuditView,
+
+        [Description("View audit logs")] AuditView,
 
         [Description("Create tenants")] [SupportsRestriction(PermissionScope.Tenants)] TenantCreate,
 
@@ -217,5 +219,18 @@ namespace Octopus.Client.Model
         [Description("Delete certificates")] [SupportsRestriction(PermissionScope.Environments, PermissionScope.Tenants)] CertificateDelete,
 
         [Description("Export certificate private-keys")] [SupportsRestriction(PermissionScope.Environments, PermissionScope.Tenants)] CertificateExportPrivateKey,
+
+        [Description("View features")] FeatureView,
+
+        [Description("Edit features")] FeatureEdit,
+
+        [Description("View configuration")] ConfigurationView,
+
+        [Description("Edit configuration")] ConfigurationEdit,
+
+        [Description("View SMTP settings")] SmtpSettingsView,
+
+        [Description("Edit SMTP settings")] SmtpSettingsEdit
+
     }
 }
